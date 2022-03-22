@@ -14,21 +14,35 @@ Co-Author: Dr. Christopher Merkord
 
 Affiliations: Minnesota State University of Moorhead
 
+## Abstract
+
+bullet points (3 to 5 points) and 10 - 15 words per bullet
+
+-   Using iNaturalist data to see if there are migration patterns
+
+-   Then identifying breeding grounds of two different species of manta ray
+
+-   Something here maybe
+
 ## Introduction
 
 This
 
-## Including Code
+## Methods
 
-You can include R code in the document as follows:
+We are using iNaturalist explain what it is and how it is collected. What did we do to get the data rNat package to get the data and how we filtered it.
+
+## Results
+
+You
 
 ```{r cars}
 summary(cars)
 ```
 
-## Including Plots
+## Discussion
 
-You can also embed plots, for example:
+You
 
 ```{r pressure, echo=FALSE}
 plot(pressure)
