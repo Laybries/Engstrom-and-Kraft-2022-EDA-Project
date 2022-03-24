@@ -22,15 +22,15 @@ bullet points (3 to 5 points) and 10 - 15 words per bullet
 
 -   Then identifying breeding grounds of two different species of manta ray
 
--   Something here maybe
-
 ## Introduction
 
-This
+Manta ray are an elusive species and recently more information has been found on the organism. Due to only selective individuals being documented through out history, it is important to understand and protect these fish. One way is by identifying potential breeding grounds and tracking migration patterns and advocate for protected fishing zones.
+
+There are two specific ray species we will be looking at the Mobula birostris (Ocean ray) and Mobula alfredi (reef ray). Both of these organisms have limited knowledge on their juvenile stage, individual juveniles have never been successfully studied in the wild (Stewart et al 2018).
 
 ## Methods
 
-We are using iNaturalist explain what it is and how it is collected. What did we do to get the data rNat package to get the data and how we filtered it.
+We are using iNaturalist a citizen science program used to catalog natural sightings of organisms in the effort to identify the individual. By using the rNat package, we filtered the data to include species name, latitude, longitude, year, month, and day of both ocean ray and reef ray. Then taking the filtered data, we will make a map of the world and use the latitude and longitude to mark the area of the sighting.
 
 ## Results
 
