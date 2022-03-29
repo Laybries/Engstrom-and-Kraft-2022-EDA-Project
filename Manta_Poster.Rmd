@@ -95,6 +95,8 @@ ggplot() +
 
 -   Weather patterns have not impacted the sightings as much as we thought
 
+-   this is dialog that is meant to be deleted later
+
 ```{r pressure, echo=FALSE}
 plot(pressure)
 ```
