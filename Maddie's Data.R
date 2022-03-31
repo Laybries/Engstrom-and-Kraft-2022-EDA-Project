@@ -5,7 +5,7 @@ indx <- setNames( rep(c('1:Winter', '2:Spring', '3:Summer',
                         '4:Fall'),each=3), c("12","01","02","03","04","05","06","07","08","09","10","11"))
 
 
-indx_breeding <- setNames( rep(c('In-Season', 'Out-Season','Out-Season','Out-Season'),each=3),
+indx_breeding <- setNames( rep(c('In-Season', 'Out-Season','Out-Season'),each=4),
                   c("10","11","12","01","02","03","04","05","06","07","08","09"))
 
 Oceanic_Ray <- get_inat_obs(query = "Oceanic Manta Ray",maxresults = 1000) %>% 
@@ -63,6 +63,7 @@ ggplot() +
       color = season,
       size = ".1",
       alpha = ".1"))+
+  coord_equal()+
   facet_wrap(~season,ncol = 2)
 
 ggsave("Reef_Ray.png",
@@ -81,6 +82,7 @@ ggplot() +
                            color = season,
                            size = ".1",
                            alpha = ".1"))+
+  coord_equal()+
   facet_wrap(~season,ncol = 2)
 
 ggsave("Oceanic_Ray.png",
