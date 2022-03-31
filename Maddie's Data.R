@@ -4,6 +4,10 @@ library(tidyverse)
 indx <- setNames( rep(c('1:Winter', '2:Spring', '3:Summer',
                         '4:Fall'),each=3), c("12","01","02","03","04","05","06","07","08","09","10","11"))
 
+
+indx_breeding <- setNames( rep(c('In-Season', 'Out-Season','Out-Season','Out-Season'),each=3),
+                  c("10","11","12","01","02","03","04","05","06","07","08","09"))
+
 Oceanic_Ray <- get_inat_obs(query = "Oceanic Manta Ray",maxresults = 1000) %>% 
   select(scientific_name, time_observed_at, latitude, longitude) %>% 
   filter(scientific_name == "Mobula birostris",time_observed_at != "") %>% 
@@ -21,7 +25,8 @@ Reef_Ray <- get_inat_obs(query = "Reef Manta Ray",maxresults = 1000) %>%
     year = substr(time_observed_at,0,4),
     month = substr(time_observed_at,6,7),
     day = substr(time_observed_at,9,10),
-    season = (indx[as.character(month)]))%>% 
+    season = (indx[as.character(month)]),
+    breeding = (indx_breeding[as.character(month)]))%>% 
   print()
 
 world <- map_data("world")
@@ -31,10 +36,21 @@ world_australia <- map_data("world") %>%
          lat <= 25,
          lat >= -50)
 
+world_australia_breeding <- map_data("world") %>% 
+  filter(long >= 50,
+         lat <= 35,
+         lat >= -60)
+
 Reef_Ray_australia <- Reef_Ray %>% 
   filter(longitude >= 50,
          latitude <= 25,
          latitude >= -50) %>% 
+  print()
+
+Reef_Ray_australia_breeding <- Reef_Ray %>% 
+  filter(longitude >= 50,
+         latitude <= 35,
+         latitude >= -60) %>% 
   print()
 
 ggplot() +
@@ -73,3 +89,20 @@ ggsave("Oceanic_Ray.png",
        units = "in",
        dpi = 400)
  
+ggplot() +
+  geom_map(
+    data = world_australia, map = world_australia_breeding,
+    aes(long, lat, map_id = region)
+  ) +
+  geom_point(data = Reef_Ray_australia_breeding,
+             mapping = aes(x = longitude, y = latitude,
+                           color = season,
+                           size = ".1",
+                           alpha = ".1"))+
+  facet_wrap(~breeding,ncol = 2)
+
+ggsave("Reef_Ray_Breeding.png",
+       height = 6,
+       width = 8,
+       units = "in",
+       dpi = 400)
