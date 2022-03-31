@@ -8,7 +8,11 @@ Abstract--Manta rays are the gentle giants of the ocean, but not much is known a
 
 Harris JL, McGregor PK, Oates Y, Stevens GMW. 2020. Gone with the wind: Seasonal distribution and habitat use by the reef manta ray ( Mobula alfredi ) in the Maldives, implications for conservation. Aquatic Conservation: Marine and Freshwater Ecosystems. 30(8):1649–1664. doi:10.1002/aqc.3350. 
 
- Peel LR, Stevens GMW, Daly R, Keating Daly CA, Collin SP, Nogués J, Meekan MG. 2020. Regional Movements of Reef Manta Rays (Mobula alfredi) in Seychelles Waters. Frontiers in Marine Science. 7. doi:10.3389/fmars.2020.00558.
+Manta Ray Reproduction - Manta Ray Facts and Information. 2018. Mantaray-worldcom. https://www.mantaray-world.com/manta-ray-reproduction/.
+
+Peel LR, Stevens GMW, Daly R, Keating Daly CA, Collin SP, Nogués J, Meekan MG. 2020. Regional Movements of Reef Manta Rays (Mobula alfredi) in Seychelles Waters. Frontiers in Marine Science. 7. doi:10.3389/fmars.2020.00558.
+
+Simpkins K. Manta alfredi (Alfred manta). Animal Diversity Web. https://animaldiversity.org/accounts/Manta_alfredi/#:~:text=Females%20mate%20once%20every%201.
 
 Stewart JD, Nuttall M, Hickerson EL, Johnston MA. 2018. Important juvenile manta ray habitat at Flower Garden Banks National Marine Sanctuary in the northwestern Gulf of Mexico. Marine Biology. 165(7). doi:10.1007/s00227-018-3364-5. 
  
