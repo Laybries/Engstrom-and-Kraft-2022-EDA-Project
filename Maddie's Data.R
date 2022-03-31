@@ -49,6 +49,12 @@ ggplot() +
       alpha = ".1"))+
   facet_wrap(~season,ncol = 2)
 
+ggsave("Reef_Ray.png",
+       height = 6,
+       width = 8,
+       units = "in",
+       dpi = 400)
+
 ggplot() +
   geom_map(
     data = world, map = world,
@@ -60,3 +66,10 @@ ggplot() +
                            size = ".1",
                            alpha = ".1"))+
   facet_wrap(~season,ncol = 2)
+
+ggsave("Oceanic_Ray.png",
+       height = 6,
+       width = 8,
+       units = "in",
+       dpi = 400)
+ 
