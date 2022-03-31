@@ -34,7 +34,13 @@ There are two specific ray species we will be looking at the Mobula birostris (O
 
 ## Methods
 
-We are using iNaturalist a citizen science program used to catalog natural sightings of organisms in the effort to identify the individual. By using the rNat package, we filtered the data to include species name, latitude, longitude, year, month, and day of both ocean ray and reef ray. Then taking the filtered data, we will make a map of the world and use the latitude and longitude to mark the area of the sighting.
+-   Using iNaturalist data, a citizen science program used to catalog sightings of organisms
+
+-   Then cleaned up the data using rNat and tidyverse
+
+-   We filtered the data to include species name, latitude, longitude, year, month, and day
+
+-   Then made a map with the filtered data
 
 ## Results
 
