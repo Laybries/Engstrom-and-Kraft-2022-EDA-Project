@@ -99,6 +99,7 @@ ggplot() +
                            color = season,
                            size = ".1",
                            alpha = ".1"))+
+  coord_equal()+
   facet_wrap(~breeding,ncol = 2)
 
 ggsave("Reef_Ray_Breeding.png",
