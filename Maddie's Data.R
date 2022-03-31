@@ -5,7 +5,7 @@ indx <- setNames( rep(c('1:Winter', '2:Spring', '3:Summer',
                         '4:Fall'),each=3), c("12","01","02","03","04","05","06","07","08","09","10","11"))
 
 
-indx_breeding <- setNames( rep(c('In-Season', 'Out-Season','Out-Season'),each=4),
+indx_breeding <- setNames( rep(c('Breeding Season', 'Non-Breeding Season','Non-Breeding Season'),each=4),
                   c("10","11","12","01","02","03","04","05","06","07","08","09"))
 
 Oceanic_Ray <- get_inat_obs(query = "Oceanic Manta Ray",maxresults = 1000) %>% 
@@ -36,21 +36,10 @@ world_australia <- map_data("world") %>%
          lat <= 25,
          lat >= -50)
 
-world_australia_breeding <- map_data("world") %>% 
-  filter(long >= 50,
-         lat <= 35,
-         lat >= -60)
-
 Reef_Ray_australia <- Reef_Ray %>% 
   filter(longitude >= 50,
          latitude <= 25,
          latitude >= -50) %>% 
-  print()
-
-Reef_Ray_australia_breeding <- Reef_Ray %>% 
-  filter(longitude >= 50,
-         latitude <= 35,
-         latitude >= -60) %>% 
   print()
 
 ggplot() +
@@ -66,7 +55,7 @@ ggplot() +
   coord_equal()+
   facet_wrap(~season,ncol = 2)
 
-ggsave("Reef_Ray.png",
+ggsave("Reef_Ray_Australia.png",
        height = 6,
        width = 8,
        units = "in",
@@ -93,10 +82,10 @@ ggsave("Oceanic_Ray.png",
  
 ggplot() +
   geom_map(
-    data = world_australia, map = world_australia_breeding,
+    data = world_australia, map = world_australia,
     aes(long, lat, map_id = region)
   ) +
-  geom_point(data = Reef_Ray_australia_breeding,
+  geom_point(data = Reef_Ray_australia,
              mapping = aes(x = longitude, y = latitude,
                            color = season,
                            size = ".1",
@@ -105,6 +94,25 @@ ggplot() +
   facet_wrap(~breeding,ncol = 2)
 
 ggsave("Reef_Ray_Breeding.png",
+       height = 6,
+       width = 8,
+       units = "in",
+       dpi = 400)
+
+ggplot() +
+  geom_map(
+    data = world, map = world,
+    aes(long, lat, map_id = region)
+  ) +
+  geom_point(data = Reef_Ray,
+             mapping = aes(x = longitude, y = latitude,
+                           color = season,
+                           size = ".1",
+                           alpha = ".1"))+
+  coord_equal()+
+  facet_wrap(~season,ncol = 2)
+
+ggsave("Reef_Ray_Global.png",
        height = 6,
        width = 8,
        units = "in",
