@@ -6,7 +6,7 @@ output: github_document
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Title
+## **Using iNaturalist to Identify Breeding Locations of Manta Ray**
 
 Authors: Madison Kraft, Luke Engstrom
 
@@ -18,7 +18,7 @@ Affiliations: Minnesota State University of Moorhead
 
 -   Manta ray migrate where the food is, which makes them hard to study
 
--   In addition, they are at risk from fisheries and bycatch
+-   In addition, they are at risk from fisheries and bycatch (Stewart et al 2016)
 
 -   Using iNaturalist data to see if there are migration patterns
 
@@ -30,7 +30,7 @@ Affiliations: Minnesota State University of Moorhead
 
 -   Manta ray are an elusive species, juveniles have never been studied in the wild (Stewart et al 2018)
 
--   Mobula birostris (oceanic ray) and Mobula alfredi (reef ray) are both migratory species
+-   *Mobula birostris* (oceanic ray) and *Mobula alfredi* (reef ray) are both migratory species
 
 -   Reef Rays typically have their mating season from October to January (Simpkins 2013)
 
@@ -49,6 +49,12 @@ Affiliations: Minnesota State University of Moorhead
 -   Then made a map with the filtered data
 
 ## Results
+
+-   Oceanic rays may have breeding grounds near the west coast of the US, Gulf of Mexico, New Zealand, Australia, and Indonesia
+
+-   Reef rays may have breeding grounds near India in the Maldives and Indonesia
+
+-   Reef rays have higher sightings in winter near India in the Maldives and Indonesia
 
 Figure 1. Map depicting Oceanic Ray sightings based off of the four seasons.
 
@@ -192,8 +198,24 @@ ggplot() +
 
 ```
 
+Figure 4.
+
 ## Discussion
 
--   Weather patterns have not impacted the sightings as much as we thought
--   For Oceanic Rays it is harder located the breeding grounds due to their global presence
--   For Reef Rays there are some locations we believe are breeding grounds due to reduced migration
+-   W
+
+## Refferences
+
+Manta Ray Reproduction - Manta Ray Facts and Information. 2018. Mantaray-worldcom. <https://www.mantaray-world.com/manta-ray-reproduction/>.
+
+Simpkins K. Manta alfredi (Alfred manta). Animal Diversity Web. <https://animaldiversity.org/accounts/Manta_alfredi/#>:\~:text=Females%20mate%20once%20every%201.
+
+Stewart JD, Beale CS, Fernando D, Sianipar AB, Burton RS, Semmens BX, Aburto-Oropeza O. 2016. Spatial ecology and conservation of Manta birostris in the Indo-Pacific. Biological Conservation. 200:178–183. <doi:10.1016/j.biocon.2016.05.016>.
+
+Stewart JD, Nuttall M, Hickerson EL, Johnston MA. 2018. Important juvenile manta ray habitat at Flower Garden Banks National Marine Sanctuary in the northwestern Gulf of Mexico. Marine Biology. 165(7). <doi:10.1007/s00227-018-3364-5>.
+
+## Acknowledgments
+
+We thank Dr. Chris Merkord for help with data access and analysis.
+
+## Other Images
