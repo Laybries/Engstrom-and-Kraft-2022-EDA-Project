@@ -49,7 +49,7 @@ ggplot() +
   ) +
   geom_point(data = Reef_Ray_australia,
              mapping = aes(x = longitude, y = latitude,
-                           color = season,
+                           shape = season,
                            size = ".1",
                            alpha = ".1"))+
   coord_equal()+
@@ -68,7 +68,7 @@ ggplot() +
   ) +
   geom_point(data = Oceanic_Ray,
              mapping = aes(x = longitude, y = latitude,
-                           color = season,
+                           shape = season,
                            size = ".1",
                            alpha = ".1"))+
   coord_equal()+
@@ -87,7 +87,7 @@ ggplot() +
   ) +
   geom_point(data = Reef_Ray_australia,
              mapping = aes(x = longitude, y = latitude,
-                           color = season,
+                           shape = season,
                            size = ".1",
                            alpha = ".1"))+
   coord_equal()+
@@ -106,9 +106,9 @@ ggplot() +
   ) +
   geom_point(data = Reef_Ray,
              mapping = aes(x = longitude, y = latitude,
-                           color = season,
-                           size = ".1",
-                           alpha = ".1"))+
+                           shape = season,
+                           size = .1,
+                           alpha = .1))+
   coord_equal()+
   facet_wrap(~season,ncol = 2)
 
@@ -117,3 +117,26 @@ ggsave("Reef_Ray_Global.png",
        width = 8,
        units = "in",
        dpi = 400)
+
+ggplot() +
+  geom_map(
+    data = world, map = world,
+    aes(long, lat, map_id = region)
+  ) +
+  geom_density_2d_filled(
+    data = Reef_Ray,
+    mapping = aes(
+      x = longitude, 
+      y = latitude,
+      # color = season
+    ),
+    alpha = .5
+  ) +
+  coord_equal()+
+  facet_wrap(~season,ncol = 2) +
+  guides(fill = "none") +
+  labs(
+    title = "",
+    caption="Lighter colors indicate denser sightings"
+  )
+  
