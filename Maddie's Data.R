@@ -49,7 +49,7 @@ ggplot() +
   ) +
   geom_point(data = Reef_Ray_australia,
     mapping = aes(x = longitude, y = latitude,
-      color = season,
+      shape = season,
       size = ".1",
       alpha = ".1"))+
   coord_equal()+
@@ -68,7 +68,7 @@ ggplot() +
   ) +
   geom_point(data = Oceanic_Ray,
              mapping = aes(x = longitude, y = latitude,
-                           color = season,
+                           shape = season,
                            size = ".1",
                            alpha = ".1"))+
   coord_equal()+
@@ -79,7 +79,7 @@ ggsave("Oceanic_Ray.png",
        width = 8,
        units = "in",
        dpi = 400)
- 
+
 ggplot() +
   geom_map(
     data = world_australia, map = world_australia,
@@ -87,7 +87,7 @@ ggplot() +
   ) +
   geom_point(data = Reef_Ray_australia,
              mapping = aes(x = longitude, y = latitude,
-                           color = season,
+                           shape = season,
                            size = ".1",
                            alpha = ".1"))+
   coord_equal()+
@@ -106,7 +106,7 @@ ggplot() +
   ) +
   geom_point(data = Reef_Ray,
              mapping = aes(x = longitude, y = latitude,
-                           color = season,
+                           shape = season,
                            size = ".1",
                            alpha = ".1"))+
   coord_equal()+
